@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badge Box</title>
+     <link rel="stylesheet" href="badge.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+       <!-- LOGIN PAGE -->
+    <div id="login-page" class="page">
+        <div class="auth-container">
+            <h2>Login to Badge Box</h2>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>First time user? <a href="#" id="show-signup">Sign Up</a></p>
+        </div>
+    </div>
+
+    <!-- SIGNUP PAGE -->
+    <div id="signup-page" class="page hidden">
+        <div class="auth-container">
+            <h2>Create Your Account</h2>
+            <form id="signup-form">
+                <input type="text" id="signup-username" placeholder="Username ID" required>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <label for="signup-photo">Upload Photo ID:</label>
+                <input type="file" id="signup-photo" accept="image/*" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+        </div>
+    </div>
+
+    <!-- DASHBOARD PAGE -->
+    <div id="dashboard-page" class="page hidden">
+        <div class="dashboard-container">
+            <header>
+                <h1>Badge Box Dashboard</h1>
+                <div class="user-profile">
+                    <span id="dashboard-username"></span>
+                    <img id="dashboard-photo" src="" alt="User Photo">
+                </div>
+                <button id="logout-btn">Logout</button>
+            </header>
+            <main>
+                <div class="dashboard-left">
+                    <div class="widget wallet">
+                        <h2>My Wallet</h2>
+                        <p id="wallet-amount">$0.00</p>
+                    </div>
+                    <div class="widget tasks">
+                        <h2>Projects to Complete</h2>
+                        <ul id="task-list">
+                            <!-- Tasks will be dynamically inserted here by JavaScript -->
+                        </ul>
+                    </div>
+                     <div class="widget prize">
+                        <h2>Total Prize Pool</h2>
+                        <p id="prize-amount">$500.00</p>
+                    </div>
+                </div>
+                <div class="dashboard-right">
+                    <div class="widget chat">
+                        <h2>Community Chat</h2>
+                        <div id="chat-messages">
+                            <p class="chat-system">Welcome to the chat!</p>
+                        </div>
+                        <form id="chat-form">
+                            <input type="text" id="chat-input" placeholder="Say something..." autocomplete="off">
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="badge.js"></script>
+</body>
+</html>
